@@ -13,6 +13,5 @@ namespace PUC.LDSI.Domain.Interfaces.Repository
         IQueryable<TEntity> ObterTodos();
         void Excluir(int id);
         int SaveChanges();
-        Task<int> SaveChangesAsync();
     }
 }

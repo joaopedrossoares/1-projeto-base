@@ -50,11 +50,6 @@ namespace PUC.LDSI.DataBase.Repository
             return DbContext.SaveChanges();
         }
 
-        public async Task<int> SaveChangesAsync()
-        {
-            return await DbContext.SaveChangesAsync();
-        }
-
         public void Dispose()
         {
             DbContext.Dispose();

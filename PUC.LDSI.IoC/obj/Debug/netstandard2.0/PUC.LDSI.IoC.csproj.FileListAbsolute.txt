@@ -1,0 +1,16 @@
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.IoC.deps.json
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.IoC.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.IoC.pdb
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Application.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Domain.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Application.pdb
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Domain.pdb
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.pdb
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.csprojAssemblyReference.cache
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.csproj.CoreCompileInputs.cache
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.AssemblyInfoInputs.cache
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.AssemblyInfo.cs
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.csproj.CopyComplete
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.pdb

@@ -1,0 +1,9 @@
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.Domain\bin\Debug\netstandard2.0\PUC.LDSI.Domain.deps.json
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.Domain\bin\Debug\netstandard2.0\PUC.LDSI.Domain.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.Domain\bin\Debug\netstandard2.0\PUC.LDSI.Domain.pdb
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.csprojAssemblyReference.cache
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.csproj.CoreCompileInputs.cache
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.AssemblyInfoInputs.cache
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.AssemblyInfo.cs
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.pdb

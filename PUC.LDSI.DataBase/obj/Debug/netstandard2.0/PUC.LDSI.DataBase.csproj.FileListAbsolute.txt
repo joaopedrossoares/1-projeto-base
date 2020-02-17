@@ -1,0 +1,12 @@
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.deps.json
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.pdb
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.Domain.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.Domain.pdb
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.csprojAssemblyReference.cache
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.csproj.CoreCompileInputs.cache
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.AssemblyInfoInputs.cache
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.AssemblyInfo.cs
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.csproj.CopyComplete
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.dll
+D:\_CARLOS\_PUC_Leila\2020\ProjetoMVC\1-projeto-base\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.pdb
