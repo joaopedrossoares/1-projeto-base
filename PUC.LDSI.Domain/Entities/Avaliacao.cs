@@ -7,7 +7,7 @@ namespace PUC.LDSI.Domain.Entities
     public class Avaliacao : Entity
     {
         public int ProfessorId { get; set; }
-        public string Diciplina { get; set; }
+        public string Disciplina { get; set; }
         public string Materia { get; set; }
         public string Descricao { get; set; }
         public List<Questao> Questoes { get; set; }
@@ -23,7 +23,7 @@ namespace PUC.LDSI.Domain.Entities
             {
                 erros.Add(" O professor presisa ser informada ");
             }
-            if (string.IsNullOrEmpty(Diciplina))
+            if (string.IsNullOrEmpty(Disciplina))
             {
                 erros.Add(" A disiplina deve ser informado ");
 

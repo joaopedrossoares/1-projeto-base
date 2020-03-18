@@ -8,7 +8,7 @@ namespace PUC.LDSI.Domain.Entities
     {
         public string Nome { get; set; }
         public List<Publicacao> Publicacoes { get; set; }
-        public List<Publicacao> Alunas { get; set; }
+        public List<Aluno> Alunos { get; set; }
 
         public override string[] Validate()
         {
