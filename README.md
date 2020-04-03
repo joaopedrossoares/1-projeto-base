@@ -1,15 +1,41 @@
-# Introduction 
-The project VouF is a system in development that aims to facilitate the assembly of tests for teachers and doing tests by students.
-# Getting Started
-TODO
+# Guia para desenvolvimento do projeto.
+### Caso seja sua primeira vez no github siga os passos abaixo. Caso contrário passe para o próximo tópico.
+*Caso o computador não possua o git instalado, favor instalar.* [Link para instalação](https://git-scm.com/download/win)
+```
+git config --global user.name "Seu nome"
+git config --global user.email "seuemail@email.com"
+```
+Para clonar o projeto é necessário que sejam executados tais comandos.
+```
+git clone https://github.com/joaopedrossoares/vouf.git
+```
+Após o projeto clonado execute o comando para adicionar um remote ao seu git local.
+```
+git remote add origin https://github.com/joaopedrossoares/vouf.git
+```
+Execute o seguinte comando para conferir se está correto. 
+```
+git remote -v
+```
+Execute o seguinte comando para atualizar seu repositório local.
+```
+git pull origin master
+```
+### Para realizar suas tarefas é necessário que uma branch seja criada.
 
-# Build and Test
-TODO
+Para criar uma branch execute o comando: 
+```
+git checkout -b NOMEDASUABRANCH
+```
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+#### Execute suas tarefas... Quando terminá-las, executar os seguintes comandos:
+```
+git pull origin master
+git status
+git add nomeDoArquivoModificado nomeDoOutroArquivo ePorAiVai
+git status
+git commit -m "mensagem explicando"
+git push origin NOMEDASUABRANCH
+```
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
