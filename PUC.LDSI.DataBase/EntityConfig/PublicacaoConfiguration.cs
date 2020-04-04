@@ -7,7 +7,7 @@ using System.Text;
 
 namespace PUC.LDSI.DataBase.EntityConfig
 {
-    class publicacaoConfiguration : IEntityTypeConfiguration<Publicacao>
+    class PublicacaoConfiguration : IEntityTypeConfiguration<Publicacao>
     {
         public void Configure(EntityTypeBuilder<Publicacao> builder)
         {
