@@ -1,17 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PUC.LDSI.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PUC.LDSI.DataBase.EntityConfig
 {
-    class QuestaoConfiguration : IEntityTypeConfiguration<Questao>
+    public class QuestaoConfiguration : IEntityTypeConfiguration<Questao>
     {
         public void Configure(EntityTypeBuilder<Questao> builder)
         {
-            builder.Property(x => x.Id).IsRequired();
+            builder.Property(x => x.Enunciado).HasColumnType("text").IsRequired();
+            builder.Property(x => x.Tipo).HasColumnType("int").IsRequired();
+
+            builder.HasOne(x => x.Avaliacao).WithMany(x => x.Questoes).HasForeignKey(x => x.AvaliacaoId).IsRequired();
+
+            new EntityConfiguration();
         }
     }
 }
