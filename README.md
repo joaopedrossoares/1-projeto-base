@@ -8,6 +8,8 @@ git config --global user.email "seuemail@email.com"
 Para clonar o projeto é necessário que sejam executados tais comandos.
 ```
 git clone https://github.com/joaopedrossoares/vouf.git
+cd vouf
+git init
 ```
 Após o projeto clonado execute o comando para adicionar um remote ao seu git local.
 ```
