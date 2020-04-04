@@ -1,18 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PUC.LDSI.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PUC.LDSI.DataBase.EntityConfig
 {
-    class PublicacaoConfiguration : IEntityTypeConfiguration<Publicacao>
+    public class PublicacaoConfiguration : IEntityTypeConfiguration<Publicacao>
     {
         public void Configure(EntityTypeBuilder<Publicacao> builder)
         {
-            builder.Property(x => x.Avaliacao).IsRequired();
-            builder.Property(x => x.Avaliacao).HasColumnType("varchar(100)");
+            builder.Property(x => x.DataInicio).HasColumnType("datetime").IsRequired();
+            builder.Property(x => x.DataFim).HasColumnType("datetime").IsRequired();
+            builder.Property(x => x.ValorProva).HasColumnType("int").IsRequired();
+
+            builder.HasOne(x => x.Turma).WithMany(x => x.Publicacoes).HasForeignKey(x => x.TurmaId).IsRequired();
+            builder.HasOne(x => x.Avaliacao).WithMany(x => x.Publicacoes).HasForeignKey(x => x.AvaliacaoId).IsRequired();
 
             new EntityConfiguration();
         }
