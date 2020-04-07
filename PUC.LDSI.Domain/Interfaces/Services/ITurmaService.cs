@@ -1,6 +1,6 @@
-﻿
+﻿using PUC.LDSI.Domain.Entities;
+using System;
 using System.Collections.Generic;
-using PUC.LDSI.Domain.Entities;
 using System.Threading.Tasks;
 
 namespace PUC.LDSI.Domain.Interfaces.Services

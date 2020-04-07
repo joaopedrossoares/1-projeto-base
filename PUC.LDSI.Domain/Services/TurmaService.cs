@@ -2,10 +2,8 @@
 using PUC.LDSI.Domain.Exception;
 using PUC.LDSI.Domain.Interfaces.Repository;
 using PUC.LDSI.Domain.Interfaces.Services;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PUC.LDSI.Domain.Services
@@ -63,7 +61,6 @@ namespace PUC.LDSI.Domain.Services
             _turmaRepository.Excluir(id);
 
             _turmaRepository.SaveChanges();
-
         }
 
         public List<Turma> ListarTurmas()

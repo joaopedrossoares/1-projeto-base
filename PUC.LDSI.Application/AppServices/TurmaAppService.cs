@@ -3,7 +3,6 @@ using PUC.LDSI.Domain.Entities;
 using PUC.LDSI.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PUC.LDSI.Application.AppServices
@@ -59,7 +58,7 @@ namespace PUC.LDSI.Application.AppServices
             }
         }
 
-        public DataResult<List<Turma>> ListarTurmasAsync()
+        public DataResult<List<Turma>> ListarTurmas()
         {
             try
             {

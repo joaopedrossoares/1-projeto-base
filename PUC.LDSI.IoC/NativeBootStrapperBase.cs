@@ -1,5 +1,4 @@
-﻿
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using PUC.LDSI.Application.AppServices;
 using PUC.LDSI.Application.Interfaces;
 using PUC.LDSI.DataBase.Repository;
@@ -11,11 +10,7 @@ namespace PUC.LDSI.IoC
 {
     public abstract class NativeBootStrapperBase
     {
-        public static void RegisterServices(IServiceCollection services)
-        {
-            //Example
-            //services.AddScoped<IClasseAppService, ClasseAppService>();
-
+        public static void RegisterServices(IServiceCollection services) {
             //Application
             services.AddScoped<ITurmaAppService, TurmaAppService>();
 

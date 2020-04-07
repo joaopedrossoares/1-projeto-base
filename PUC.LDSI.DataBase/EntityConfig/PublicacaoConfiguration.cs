@@ -8,12 +8,17 @@ namespace PUC.LDSI.DataBase.EntityConfig
     {
         public void Configure(EntityTypeBuilder<Publicacao> builder)
         {
-            builder.Property(x => x.DataInicio).HasColumnType("datetime").IsRequired();
-            builder.Property(x => x.DataFim).HasColumnType("datetime").IsRequired();
-            builder.Property(x => x.ValorProva).HasColumnType("int").IsRequired();
+            builder.Property(x => x.DataInicio).IsRequired().HasColumnType("date");
 
-            builder.HasOne(x => x.Turma).WithMany(x => x.Publicacoes).HasForeignKey(x => x.TurmaId).IsRequired();
-            builder.HasOne(x => x.Avaliacao).WithMany(x => x.Publicacoes).HasForeignKey(x => x.AvaliacaoId).IsRequired();
+            builder.Property(x => x.DataFim).IsRequired().HasColumnType("date");
+
+            builder.HasOne(x => x.Avaliacao)
+                .WithMany(x => x.Publicacoes)
+                .HasForeignKey(x => x.AvaliacaoId);
+
+            builder.HasOne(x => x.Turma)
+                .WithMany(x => x.Publicacoes)
+                .HasForeignKey(x => x.TurmaId);
 
             new EntityConfiguration();
         }
