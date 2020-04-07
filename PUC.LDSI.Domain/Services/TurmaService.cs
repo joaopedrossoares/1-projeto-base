@@ -11,6 +11,7 @@ namespace PUC.LDSI.Domain.Services
     public class TurmaService : ITurmaService
     {
         private readonly ITurmaRepository _turmaRepository;
+        private readonly IAlunoRepository _AlunoRepository;
 
         public TurmaService(ITurmaRepository turmaRepository)
         {
@@ -75,6 +76,21 @@ namespace PUC.LDSI.Domain.Services
             var turma = await _turmaRepository.ObterAsync(id);
 
             return turma;
+        }
+
+        public async Task<int> IncluirAlunoAsync(int turmaId, string nomeAluno)
+        {
+            Aluno aluno = new Aluno() { TurmaId = turmaId, Nome = nomeAluno};
+            var erros = aluno.Validate();
+            if (erros.Length == 0)
+            {
+                await _AlunoRepository.AdicionarAsync(aluno);
+                _AlunoRepository.SaveChanges();
+                return aluno.Id;
+                
+            }
+            else throw new DomainException(erros);
+
         }
     }
 }
