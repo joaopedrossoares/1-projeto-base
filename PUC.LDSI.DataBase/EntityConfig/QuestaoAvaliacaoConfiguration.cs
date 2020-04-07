@@ -1,18 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PUC.LDSI.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PUC.LDSI.DataBase.EntityConfig
 {
-    class QuestaoAvaliacaoConfiguration : IEntityTypeConfiguration<QuestaoProva>
+    public class QuestaoAvaliacaoConfiguration : IEntityTypeConfiguration<QuestaoAvaliacao>
     {
-        public void Configure(EntityTypeBuilder<QuestaoProva> builder)
+        public void Configure(EntityTypeBuilder<QuestaoAvaliacao> builder)
         {
-            builder.Property(x => x.Questao).IsRequired();
-            builder.Property(x => x.Questao).HasColumnType("varchar(100)");
+            builder.Property(x => x.Enunciado).IsRequired().HasColumnType("varchar(255)");
+
+            builder.HasOne(x => x.Avaliacao)
+                .WithMany(x => x.Questoes)
+                .HasForeignKey(x => x.AvaliacaoId);
 
             new EntityConfiguration();
         }

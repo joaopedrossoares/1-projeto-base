@@ -8,10 +8,15 @@ namespace PUC.LDSI.DataBase.EntityConfig
     {
         public void Configure(EntityTypeBuilder<OpcaoProva> builder)
         {
-            builder.Property(x => x.Resposta).HasColumnType("bit").IsRequired();
+            builder.Property(x => x.Resposta).HasColumnType("bit");
 
-            builder.HasOne(x => x.OpcaoAvaliacao).WithMany(x => x.OpcoesProva).HasForeignKey(x => x.OpcaoAvaliacaoId).IsRequired();
-            builder.HasOne(x => x.QuestaoProva).WithMany(x => x.OpçoesProvas).HasForeignKey(x => x.QuestaoProvaId).IsRequired();
+            builder.HasOne(x => x.OpcaoAvaliacao)
+                .WithMany(x => x.OpcoesProva)
+                .HasForeignKey(x => x.OpcaoAvaliacaoId);
+
+            builder.HasOne(x => x.QuestaoProva)
+                .WithMany(x => x.OpcoesProva)
+                .HasForeignKey(x => x.QuestaoProvaId);
 
             new EntityConfiguration();
         }

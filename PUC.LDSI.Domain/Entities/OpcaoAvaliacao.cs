@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace PUC.LDSI.Domain.Entities
 {
@@ -9,24 +7,20 @@ namespace PUC.LDSI.Domain.Entities
         public int QuestaoId { get; set; }
         public string Descricao { get; set; }
         public bool Verdadeira { get; set; }
+        public QuestaoAvaliacao Questao { get; set; }
         public List<OpcaoProva> OpcoesProva { get; set; }
-        public Questao Questao { get; set; }
 
         public override string[] Validate()
         {
             var erros = new List<string>();
 
-            if (QuestaoId == 0)
-            {
-                erros.Add(" A questão presisa ser informada ");
-            }
             if (string.IsNullOrEmpty(Descricao))
-            {
-                erros.Add("A Descrição deve ser informado ");
+                erros.Add("A descrição precisa ser informada!");
 
-            }
+            if (QuestaoId == 0)
+                erros.Add("A questão precisa ser informada!");
+
             return erros.ToArray();
         }
-
     }
 }

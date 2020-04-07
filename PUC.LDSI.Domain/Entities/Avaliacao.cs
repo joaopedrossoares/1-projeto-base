@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace PUC.LDSI.Domain.Entities
 {
@@ -10,34 +8,27 @@ namespace PUC.LDSI.Domain.Entities
         public string Disciplina { get; set; }
         public string Materia { get; set; }
         public string Descricao { get; set; }
-        public List<Questao> Questoes { get; set; }
+        public Professor Professor { get; set; }
+        public List<QuestaoAvaliacao> Questoes { get; set; }
         public List<Prova> Provas { get; set; }
         public List<Publicacao> Publicacoes { get; set; }
-        public Professor Professor { get; set; }
 
         public override string[] Validate()
         {
             var erros = new List<string>();
 
-            if (ProfessorId == 0)
-            {
-                erros.Add(" O professor presisa ser informada ");
-            }
             if (string.IsNullOrEmpty(Disciplina))
-            {
-                erros.Add(" A disiplina deve ser informado ");
+                erros.Add("A disciplina precisa ser informada!");
 
-            }
             if (string.IsNullOrEmpty(Materia))
-            {
-                erros.Add(" A materia deve ser informado ");
+                erros.Add("A matéria precisa ser informada!");
 
-            }
             if (string.IsNullOrEmpty(Descricao))
-            {
-                erros.Add(" A descrição deve ser informado ");
+                erros.Add("A descrição da avaliacao precisa ser informada!");
 
-            }
+            if (ProfessorId == 0)
+                erros.Add("O professor precisa ser informado!");
+
             return erros.ToArray();
         }
     }
