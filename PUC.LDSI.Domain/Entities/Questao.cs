@@ -4,34 +4,28 @@ using System.Text;
 
 namespace PUC.LDSI.Domain.Entities
 {
-    public class Questao : Entity
-    {
-        public int AvaliacaoId { get; set; }
-        public int Tipo { get; set; }
-        public string Enunciado { get; set; }
-        public List<OpcaoAvaliacao> OpcoesAvaliacao { get; set; }
-        public List<QuestaoProva> QuestoesProva { get; set; }
-        public Avaliacao Avaliacao { get; set; }
+	public class Questao : Entity
+	{
+		public int AvaliacaoId { get; set; }
+		public byte Tipo { get; set; }
+		public string Enunciado { get; set; }
 
-        public override string[] Validate()
-        {
+		//---- Relacionamentos ----
+
+		public Avaliacao Avaliacao { get; set; }
+		public List<QuestaoProva> QuestoesProvas { get; set; }
+		public List<OpcaoAvaliacao> OpcoesAvaliacoes { get; set; }
+
+		public override string[] Validate()
+		{
             var erros = new List<string>();
-
             if (AvaliacaoId == 0)
-            {
-                erros.Add(" O Id da Avaliação presisa ser informada ");
-            }
-            if (Tipo == 1 || Tipo == 2)
-            {
-                erros.Add(" O tipo dve ser prenchido 1 pata Múltipla Escolha e 2 para Verdadeiro ou Falso ");
-
-            }
+                erros.Add("A avaliação precisa ser informada!");
+            if (Tipo == 0)
+                erros.Add("O tipo da prova precisa ser informado! 1 (Múltipla Escolha) ou 2 (Verdadeiro ou Falso);");
             if (string.IsNullOrEmpty(Enunciado))
-            {
-                erros.Add(" O enunciado presisa ser informada");
-            }
+                erros.Add("O enunciado precisa ser informado!");
             return erros.ToArray();
         }
-
-    }
+	}
 }
