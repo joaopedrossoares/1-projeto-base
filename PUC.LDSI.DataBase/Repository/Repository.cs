@@ -45,7 +45,7 @@ namespace PUC.LDSI.DataBase.Repository
             DbEntity.Remove(entity);
         }
 
-        public virtual int SaveChanges()
+        public int SaveChanges()
         {
             return DbContext.SaveChanges();
         }
