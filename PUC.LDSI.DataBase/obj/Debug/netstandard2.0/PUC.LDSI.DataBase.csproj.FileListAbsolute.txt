@@ -1,0 +1,12 @@
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.deps.json
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.dll
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.pdb
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.Domain.dll
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\bin\Debug\netstandard2.0\PUC.LDSI.Domain.pdb
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.csprojAssemblyReference.cache
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.AssemblyInfoInputs.cache
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.AssemblyInfo.cs
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.csproj.CopyComplete
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.dll
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.DataBase\obj\Debug\netstandard2.0\PUC.LDSI.DataBase.pdb
