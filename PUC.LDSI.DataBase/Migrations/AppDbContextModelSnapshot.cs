@@ -15,7 +15,7 @@ namespace PUC.LDSI.DataBase.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.11-servicing-32099")
+                .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -50,7 +50,7 @@ namespace PUC.LDSI.DataBase.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("Disciplina")
                         .IsRequired()
@@ -79,12 +79,11 @@ namespace PUC.LDSI.DataBase.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<int>("QuestaoId");
 
-                    b.Property<bool>("Verdadeira")
-                        .HasColumnType("bit");
+                    b.Property<bool>("Verdadeira");
 
                     b.HasKey("Id");
 
@@ -105,8 +104,7 @@ namespace PUC.LDSI.DataBase.Migrations
 
                     b.Property<int>("QuestaoProvaId");
 
-                    b.Property<bool>("Resposta")
-                        .HasColumnType("bit");
+                    b.Property<bool>("Resposta");
 
                     b.HasKey("Id");
 
@@ -146,8 +144,10 @@ namespace PUC.LDSI.DataBase.Migrations
 
                     b.Property<DateTime>("DataCriacao");
 
-                    b.Property<DateTime>("DataProva")
+                    b.Property<DateTime>("DataPova")
                         .HasColumnType("date");
+
+                    b.Property<decimal>("NotaObtida");
 
                     b.HasKey("Id");
 
@@ -176,7 +176,8 @@ namespace PUC.LDSI.DataBase.Migrations
 
                     b.Property<int>("TurmaId");
 
-                    b.Property<int>("ValorProva");
+                    b.Property<double>("ValorProva")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -187,7 +188,7 @@ namespace PUC.LDSI.DataBase.Migrations
                     b.ToTable("Publicacao");
                 });
 
-            modelBuilder.Entity("PUC.LDSI.Domain.Entities.QuestaoAvaliacao", b =>
+            modelBuilder.Entity("PUC.LDSI.Domain.Entities.Questao", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -199,15 +200,16 @@ namespace PUC.LDSI.DataBase.Migrations
 
                     b.Property<string>("Enunciado")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(max)");
 
-                    b.Property<int>("Tipo");
+                    b.Property<byte>("Tipo")
+                        .HasColumnType("tinyint)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AvaliacaoId");
 
-                    b.ToTable("QuestaoAvaliacao");
+                    b.ToTable("Questao");
                 });
 
             modelBuilder.Entity("PUC.LDSI.Domain.Entities.QuestaoProva", b =>
@@ -218,8 +220,7 @@ namespace PUC.LDSI.DataBase.Migrations
 
                     b.Property<DateTime>("DataCriacao");
 
-                    b.Property<decimal>("Nota")
-                        .HasColumnType("decimal(10,4)");
+                    b.Property<decimal>("Nota");
 
                     b.Property<int>("ProvaId");
 
@@ -269,8 +270,8 @@ namespace PUC.LDSI.DataBase.Migrations
 
             modelBuilder.Entity("PUC.LDSI.Domain.Entities.OpcaoAvaliacao", b =>
                 {
-                    b.HasOne("PUC.LDSI.Domain.Entities.QuestaoAvaliacao", "Questao")
-                        .WithMany("Opcoes")
+                    b.HasOne("PUC.LDSI.Domain.Entities.Questao", "Questao")
+                        .WithMany("OpcoesAvaliacoes")
                         .HasForeignKey("QuestaoId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
@@ -278,12 +279,12 @@ namespace PUC.LDSI.DataBase.Migrations
             modelBuilder.Entity("PUC.LDSI.Domain.Entities.OpcaoProva", b =>
                 {
                     b.HasOne("PUC.LDSI.Domain.Entities.OpcaoAvaliacao", "OpcaoAvaliacao")
-                        .WithMany("OpcoesProva")
+                        .WithMany("OpcoesProvas")
                         .HasForeignKey("OpcaoAvaliacaoId")
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PUC.LDSI.Domain.Entities.QuestaoProva", "QuestaoProva")
-                        .WithMany("OpcoesProva")
+                        .WithMany("OpcoesProvas")
                         .HasForeignKey("QuestaoProvaId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
@@ -314,7 +315,7 @@ namespace PUC.LDSI.DataBase.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("PUC.LDSI.Domain.Entities.QuestaoAvaliacao", b =>
+            modelBuilder.Entity("PUC.LDSI.Domain.Entities.Questao", b =>
                 {
                     b.HasOne("PUC.LDSI.Domain.Entities.Avaliacao", "Avaliacao")
                         .WithMany("Questoes")
@@ -325,12 +326,12 @@ namespace PUC.LDSI.DataBase.Migrations
             modelBuilder.Entity("PUC.LDSI.Domain.Entities.QuestaoProva", b =>
                 {
                     b.HasOne("PUC.LDSI.Domain.Entities.Prova", "Prova")
-                        .WithMany("QuestoesProva")
+                        .WithMany("QuestoesProvas")
                         .HasForeignKey("ProvaId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("PUC.LDSI.Domain.Entities.QuestaoAvaliacao", "QuestaoAvaliacao")
-                        .WithMany("QuestoesProva")
+                    b.HasOne("PUC.LDSI.Domain.Entities.Questao", "Questao")
+                        .WithMany("QuestoesProvas")
                         .HasForeignKey("QuestaoId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });

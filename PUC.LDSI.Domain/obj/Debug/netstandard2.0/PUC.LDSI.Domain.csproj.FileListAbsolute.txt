@@ -1,0 +1,9 @@
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Domain\bin\Debug\netstandard2.0\PUC.LDSI.Domain.deps.json
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Domain\bin\Debug\netstandard2.0\PUC.LDSI.Domain.dll
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Domain\bin\Debug\netstandard2.0\PUC.LDSI.Domain.pdb
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.csprojAssemblyReference.cache
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.AssemblyInfoInputs.cache
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.AssemblyInfo.cs
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.dll
+C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Domain\obj\Debug\netstandard2.0\PUC.LDSI.Domain.pdb
