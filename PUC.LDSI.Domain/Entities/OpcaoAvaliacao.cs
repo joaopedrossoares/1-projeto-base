@@ -23,6 +23,8 @@ namespace PUC.LDSI.Domain.Entities
                 erros.Add("A questão precisa ser informada!");
             if (string.IsNullOrEmpty(Descricao))
                 erros.Add("A descrição precisa ser informada!");
+			if (Questao.Tipo == 1 && Verdadeira)
+				erros.Add("Não foi possível salvar!");
             return erros.ToArray();
         }
 	}

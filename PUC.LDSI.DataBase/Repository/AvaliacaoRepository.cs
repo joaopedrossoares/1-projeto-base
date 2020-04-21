@@ -20,7 +20,7 @@ namespace PUC.LDSI.DataBase.Repository
         {
             var avaliacao = await _context.Avaliacao
                 .Include(x => x.Questoes)
-                .ThenInclude(questoes => questoes.OpcoesAvaliacoes)
+                .ThenInclude(questoes => questoes.OpcaoAvaliacoes)
                 .Include(x => x.Professor)
                 .Where(x => x.Id == id).FirstOrDefaultAsync();
 
@@ -29,7 +29,7 @@ namespace PUC.LDSI.DataBase.Repository
 
         public virtual Task<List<Avaliacao>> ListarAvaliacoesDoProfessorAsync(int professorId)
         {
-            var avaliacoes = _context.Avaliacao
+            var avaliacoes =  _context.Avaliacao
                 .Include(x => x.Professor)
                 .Where(x => x.ProfessorId == professorId).ToListAsync();
 
