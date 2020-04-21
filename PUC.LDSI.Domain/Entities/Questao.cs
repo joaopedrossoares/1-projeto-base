@@ -7,7 +7,7 @@ namespace PUC.LDSI.Domain.Entities
 	public class Questao : Entity
 	{
 		public int AvaliacaoId { get; set; }
-		public byte Tipo { get; set; }
+		public int Tipo { get; set; }
 		public string Enunciado { get; set; }
 
 		//---- Relacionamentos ----
