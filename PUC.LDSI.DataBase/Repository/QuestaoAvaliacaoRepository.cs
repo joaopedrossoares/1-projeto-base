@@ -30,8 +30,10 @@ namespace PUC.LDSI.DataBase.Repository
         {
             var questao = await _context.Questao
                 .Include(x => x.Avaliacao)
+                .ThenInclude(x => x.Questoes)
                 .Include(x => x.OpcoesAvaliacoes)
                 .Include(x => x.QuestoesProvas)
+                .ThenInclude(x => x.OpcoesProvas)
                 .FirstOrDefaultAsync();
 
             return questao;
