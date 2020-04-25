@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {}
+    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
+    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
         "projectName": "PUC.LDSI.Identity",
-        "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
+        "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
         "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\obj\\",
+        "outputPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

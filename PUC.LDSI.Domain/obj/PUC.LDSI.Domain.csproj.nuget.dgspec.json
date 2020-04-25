@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {}
+    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
         "projectName": "PUC.LDSI.Domain",
-        "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
+        "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
         "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

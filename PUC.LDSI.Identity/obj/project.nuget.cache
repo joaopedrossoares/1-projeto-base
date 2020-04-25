@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Itm1ZRrWj1N1yBy/zEGSldSYR/n8ky0npIr/8pSx4uwJ25rKlAjzjQSPJP9qZ5zqRM4TvM0TOJd6OQ3bMogOyg==",
+  "dgSpecHash": "2DrUV7NC4NnAeG3xyn9426y4jQFOjr0WlgiC1B1ngs22jmzjkS8neGu1u2Bm/mqgjLf6wh3C3cnp68F0zkk4OA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
+  "projectFilePath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.antiforgery\\2.1.1\\microsoft.aspnetcore.antiforgery.2.1.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication\\2.1.1\\microsoft.aspnetcore.authentication.2.1.1.nupkg.sha512",

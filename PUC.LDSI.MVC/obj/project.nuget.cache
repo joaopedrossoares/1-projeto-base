@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Aj8KxkUCYpEoetlVo6VxntXdwvcgR17Rp7i3+pRaZGeH25Q2A8lOAErpHnPItIJwiaEytdm2JT5uBryIKA6xfA==",
+  "dgSpecHash": "jAOFISJuaiUGfBO8pii0qUvVtz0rcFz395xEbF4wIh5G2+5tyOk14JV0ubq9fF8zYnXdRD/FqwLOlukuzMg6xw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
+  "projectFilePath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\João Pedro\\.nuget\\packages\\automapper\\6.2.2\\automapper.6.2.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",

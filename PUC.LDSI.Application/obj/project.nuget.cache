@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YCk7rCC6bDyxNQGIMxhxXypJFmvdO5rrEiqCSytv6kjdiLt7Q1LiqBjt9UaoFg8C3QBhNvkJLBFHUBt//2II+A==",
+  "dgSpecHash": "8VP8tkCK2p1gQXJRmdHkdUFQp0YbRCLjjmfSDAANgak6hdmHrRkD44u7DGdQaAv6MUyTN9CgqV5mVzPhEs4ZfA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
+  "projectFilePath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.entityframeworkcore\\2.1.1\\microsoft.entityframeworkcore.2.1.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.entityframeworkcore.abstractions\\2.1.1\\microsoft.entityframeworkcore.abstractions.2.1.1.nupkg.sha512",
