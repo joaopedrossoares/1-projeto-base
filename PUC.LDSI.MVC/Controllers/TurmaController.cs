@@ -1,46 +1,35 @@
-﻿using System;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using PUC.LDSI.Application.Interfaces;
+using PUC.LDSI.Domain.Entities;
+using PUC.LDSI.Domain.Interfaces.Repository;
+using PUC.LDSI.MVC.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using PUC.LDSI.DataBase;
-using PUC.LDSI.Domain.Entities;
 
 namespace PUC.LDSI.MVC.Controllers
 {
     public class TurmaController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly ITurmaAppService _turmaAppService;
+        private readonly ITurmaRepository _turmaRepository;
 
-        public TurmaController(AppDbContext context)
+        public TurmaController(ITurmaAppService turmaAppService,
+                              ITurmaRepository turmaRepository)
         {
-            _context = context;
+            _turmaAppService = turmaAppService;
+            _turmaRepository = turmaRepository;
         }
 
         // GET: Turma
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Turma.ToListAsync());
-        }
+            var result = _turmaRepository.ObterTodos();
 
-        // GET: Turma/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var turmas = Mapper.Map<List<TurmaViewModel>>(result.ToList());
 
-            var turma = await _context.Turma
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (turma == null)
-            {
-                return NotFound();
-            }
-
-            return View(turma);
+            return View(turmas);
         }
 
         // GET: Turma/Create
@@ -54,13 +43,17 @@ namespace PUC.LDSI.MVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nome,Id,DataCriacao")] Turma turma)
+        public async Task<IActionResult> Create([Bind("Nome,Id")] Turma turma)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(turma);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                var result = await _turmaAppService.AdicionarTurmaAsync(turma.Nome);
+
+                if (result.Success)
+                    return RedirectToAction(nameof(Index));
+                else
+                    throw result.Exception;
+
             }
             return View(turma);
         }
@@ -73,12 +66,16 @@ namespace PUC.LDSI.MVC.Controllers
                 return NotFound();
             }
 
-            var turma = await _context.Turma.FindAsync(id);
+            var turma = await _turmaRepository.ObterAsync(id.Value);
+
             if (turma == null)
             {
                 return NotFound();
             }
-            return View(turma);
+
+            var viewModel = Mapper.Map<TurmaViewModel>(turma);
+
+            return View(viewModel);
         }
 
         // POST: Turma/Edit/5
@@ -86,7 +83,7 @@ namespace PUC.LDSI.MVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Nome,Id,DataCriacao")] Turma turma)
+        public async Task<IActionResult> Edit(int id, [Bind("Nome,Id")] TurmaViewModel turma)
         {
             if (id != turma.Id)
             {
@@ -95,23 +92,12 @@ namespace PUC.LDSI.MVC.Controllers
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(turma);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TurmaExists(turma.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                var result = await _turmaAppService.AlterarTurmaAsync(turma.Id, turma.nome);
+
+                if (result.Success)
+                    return RedirectToAction(nameof(Index));
+                else
+                    throw result.Exception;
             }
             return View(turma);
         }
@@ -124,14 +110,16 @@ namespace PUC.LDSI.MVC.Controllers
                 return NotFound();
             }
 
-            var turma = await _context.Turma
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var turma = await _turmaRepository.ObterAsync(id.Value);
+
             if (turma == null)
             {
                 return NotFound();
             }
 
-            return View(turma);
+            var viewModel = Mapper.Map<TurmaViewModel>(turma);
+
+            return View(viewModel);
         }
 
         // POST: Turma/Delete/5
@@ -139,15 +127,13 @@ namespace PUC.LDSI.MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var turma = await _context.Turma.FindAsync(id);
-            _context.Turma.Remove(turma);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            var result = await _turmaAppService.ExcluirAsync(id);
+
+            if (result.Success)
+                return RedirectToAction(nameof(Index));
+            else
+                throw result.Exception;
         }
 
-        private bool TurmaExists(int id)
-        {
-            return _context.Turma.Any(e => e.Id == id);
-        }
     }
 }

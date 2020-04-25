@@ -1,4 +1,4 @@
-﻿@model PUC.LDSI.Domain.Entities.Turma
+﻿@model PUC.LDSI.Domain.Entities.Questao
 
 @{
     ViewData["Title"] = "Details";
@@ -8,14 +8,26 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Turma</h4>
+    <h4>Questao</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Nome)
+            @Html.DisplayNameFor(model => model.Tipo)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Nome)
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Enunciado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Enunciado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Descricao)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.DataCriacao)
