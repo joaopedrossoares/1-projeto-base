@@ -9,5 +9,6 @@ namespace PUC.LDSI.Domain.Interfaces.Repository
     public interface ITurmaRepository : IRepository<Turma>
     {
         Task<Turma> ObterAsync(int id);
+
     }
 }
