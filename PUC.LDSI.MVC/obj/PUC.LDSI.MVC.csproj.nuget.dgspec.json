@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj": {}
+    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
+    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
         "projectName": "PUC.LDSI.Application",
-        "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
-        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Application\\obj\\",
+        "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
+        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,11 +30,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj"
+              "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj": {
+                "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj"
               },
-              "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+                "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
               }
             }
           }
@@ -66,17 +69,20 @@
         }
       }
     },
-    "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj": {
+    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj",
+        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj",
         "projectName": "PUC.LDSI.DataBase",
-        "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj",
-        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.DataBase\\obj\\",
+        "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj",
+        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.DataBase\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,8 +95,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+                "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
               }
             }
           }
@@ -135,17 +141,20 @@
         }
       }
     },
-    "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
         "projectName": "PUC.LDSI.Domain",
-        "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
-        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\obj\\",
+        "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
+        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -190,17 +199,20 @@
         }
       }
     },
-    "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
+    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
         "projectName": "PUC.LDSI.Identity",
-        "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
-        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Identity\\obj\\",
+        "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
+        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -267,17 +279,20 @@
         }
       }
     },
-    "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj": {
+    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj",
         "projectName": "PUC.LDSI.IoC",
-        "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj",
-        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.IoC\\obj\\",
+        "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj",
+        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.IoC\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -290,11 +305,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj"
+              "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
+                "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj"
               },
-              "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+                "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
               }
             }
           }
@@ -333,17 +348,20 @@
         }
       }
     },
-    "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj": {
+    "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
+        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
         "projectName": "PUC.LDSI.MVC",
-        "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
-        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.MVC\\obj\\",
+        "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
+        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.MVC\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -356,17 +374,17 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj"
+              "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
+                "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj"
               },
-              "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+                "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
               },
-              "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj"
+              "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
+                "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj"
               },
-              "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Desktop\\Dev 1\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj"
+              "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj": {
+                "projectPath": "C:\\Users\\João Pedro\\Desktop\\planta\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj"
               }
             }
           }
