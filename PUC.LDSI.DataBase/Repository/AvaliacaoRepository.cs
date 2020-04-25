@@ -20,7 +20,7 @@ namespace PUC.LDSI.DataBase.Repository
         {
             var avaliacao = await _context.Avaliacao
                 .Include(x => x.Questoes)
-                .ThenInclude(questoes => questoes.OpcaoAvaliacoes)
+                .ThenInclude(questoes => questoes.OpcoesAvaliacoes)
                 .Include(x => x.Professor)
                 .Where(x => x.Id == id).FirstOrDefaultAsync();
 
