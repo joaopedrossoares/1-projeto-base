@@ -14,19 +14,20 @@ C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC
 C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.csproj.CopyComplete
 C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.dll
 C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.pdb
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.IoC.deps.json
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.IoC.dll
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.IoC.pdb
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Application.dll
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.dll
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Domain.dll
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Application.pdb
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Domain.pdb
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.pdb
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.csprojAssemblyReference.cache
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.csproj.CoreCompileInputs.cache
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.AssemblyInfoInputs.cache
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.AssemblyInfo.cs
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.csproj.CopyComplete
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.dll
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.pdb
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.IoC.deps.json
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.IoC.dll
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.IoC.pdb
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Application.dll
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.dll
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Domain.dll
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Application.pdb
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Domain.pdb
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.DataBase.pdb
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.csprojAssemblyReference.cache
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.AssemblyInfoInputs.cache
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.AssemblyInfo.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.csproj.CopyComplete
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.dll
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\obj\Debug\netstandard2.0\PUC.LDSI.IoC.pdb
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Identity.dll
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.IoC\bin\Debug\netstandard2.0\PUC.LDSI.Identity.pdb
