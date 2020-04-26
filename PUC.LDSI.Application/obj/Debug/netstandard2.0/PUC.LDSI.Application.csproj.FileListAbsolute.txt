@@ -25,3 +25,5 @@ C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Application\obj\Debug\netstandard2.0\
 C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Application\obj\Debug\netstandard2.0\PUC.LDSI.Application.csproj.CopyComplete
 C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Application\obj\Debug\netstandard2.0\PUC.LDSI.Application.dll
 C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Application\obj\Debug\netstandard2.0\PUC.LDSI.Application.pdb
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Application\bin\Debug\netstandard2.0\PUC.LDSI.Identity.dll
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Application\bin\Debug\netstandard2.0\PUC.LDSI.Identity.pdb

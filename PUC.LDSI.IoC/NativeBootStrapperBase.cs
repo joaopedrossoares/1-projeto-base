@@ -15,12 +15,15 @@ namespace PUC.LDSI.IoC
 
             //Application
             services.AddScoped<ITurmaAppService, TurmaAppService>();
+            services.AddScoped<IProfessorAppService, ProfessorAppService>();
 
             //Domain - Repository
             services.AddScoped<ITurmaRepository, TurmaRepository>();
+            services.AddScoped<IProfessorRepository, ProfessorRepository>();
 
             //Domain - Services
             services.AddScoped<ITurmaService, TurmaService>();
+            services.AddScoped<IProfessorService, ProfessorService>();
         }
     }
 }

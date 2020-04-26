@@ -69,5 +69,15 @@ namespace PUC.LDSI.Domain.Services
             var turma = await _turmaRepository.ObterAsync(id);
             return turma;
         }
+        public async Task IncluirAlunoAsync(int turmaid, string nomeAluno)
+        {
+            var turma = await _turmaRepository.ObterAsync(turmaid);
+
+            var aluno = new Aluno() { Nome = nomeAluno };
+
+            turma.Alunos.Add(aluno);
+        }
+
+
     }
 }

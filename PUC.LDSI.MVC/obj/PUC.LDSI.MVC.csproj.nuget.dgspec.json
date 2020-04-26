@@ -32,6 +32,9 @@
               },
               "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
                 "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              },
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj"
               }
             }
           }
@@ -174,6 +177,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.Threading.Tasks": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

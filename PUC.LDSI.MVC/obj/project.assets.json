@@ -4695,7 +4695,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "PUC.LDSI.DataBase": "1.0.0",
-          "PUC.LDSI.Domain": "1.0.0"
+          "PUC.LDSI.Domain": "1.0.0",
+          "PUC.LDSI.Identity": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PUC.LDSI.Application.dll": {}
@@ -4721,6 +4722,9 @@
       "PUC.LDSI.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.Threading.Tasks": "4.3.0"
+        },
         "compile": {
           "bin/placeholder/PUC.LDSI.Domain.dll": {}
         },

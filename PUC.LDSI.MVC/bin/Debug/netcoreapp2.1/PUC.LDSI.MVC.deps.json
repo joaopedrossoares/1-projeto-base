@@ -418,7 +418,8 @@
       "PUC.LDSI.Application/1.0.0": {
         "dependencies": {
           "PUC.LDSI.DataBase": "1.0.0",
-          "PUC.LDSI.Domain": "1.0.0"
+          "PUC.LDSI.Domain": "1.0.0",
+          "PUC.LDSI.Identity": "1.0.0"
         },
         "runtime": {
           "PUC.LDSI.Application.dll": {}
@@ -440,6 +441,9 @@
         }
       },
       "PUC.LDSI.Domain/1.0.0": {
+        "dependencies": {
+          "System.Threading.Tasks": "4.3.0"
+        },
         "runtime": {
           "PUC.LDSI.Domain.dll": {}
         },

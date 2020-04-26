@@ -83,3 +83,15 @@ C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Vie
 C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Turma\Edit.cshtml.g.cs
 C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Turma\Index.cshtml.g.cs
 C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_MenuPartial.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\QuestaoAvaliacao\Create.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\QuestaoAvaliacao\Delete.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\QuestaoAvaliacao\Edit.cshtml.g.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\QuestaoAvaliacao\Index.cshtml.g.cs

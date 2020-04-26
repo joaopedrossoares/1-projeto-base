@@ -54,7 +54,7 @@ using PUC.LDSI.MVC.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(0, 144, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a09ca221d0c44608e9b28cd69ff5bc0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "684ba662d4dc45709c85b82adff64cc1", async() => {
                 BeginContext(134, 6, true);
                 WriteLiteral("Turmas");
                 EndContext();

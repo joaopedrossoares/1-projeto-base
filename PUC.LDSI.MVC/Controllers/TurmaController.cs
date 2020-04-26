@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PUC.LDSI.Application.Interfaces;
 using PUC.LDSI.Domain.Entities;
 using PUC.LDSI.Domain.Interfaces.Repository;
+using PUC.LDSI.Identity.Entities;
 using PUC.LDSI.MVC.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +12,14 @@ using System.Threading.Tasks;
 
 namespace PUC.LDSI.MVC.Controllers
 {
-    public class TurmaController : Controller
+    public class TurmaController : BaseController
     {
         private readonly ITurmaAppService _turmaAppService;
         private readonly ITurmaRepository _turmaRepository;
 
-        public TurmaController(ITurmaAppService turmaAppService,
-                              ITurmaRepository turmaRepository)
+        public TurmaController(UserManager<Usuario> user, 
+                            ITurmaAppService turmaAppService,
+                            ITurmaRepository turmaRepository): base(user)
         {
             _turmaAppService = turmaAppService;
             _turmaRepository = turmaRepository;
