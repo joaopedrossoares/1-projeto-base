@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj": {}
+    "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
+    "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
         "projectName": "PUC.LDSI.Application",
-        "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
-        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Application\\obj\\",
+        "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj",
+        "packagesPath": "C:\\Users\\PICHAU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PICHAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,11 +27,14 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj": {
-                "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj"
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj"
               },
-              "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
-                "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              },
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj"
               }
             }
           }
@@ -65,24 +65,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj": {
+    "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj",
+        "projectUniqueName": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj",
         "projectName": "PUC.LDSI.DataBase",
-        "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj",
-        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.DataBase\\obj\\",
+        "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.DataBase\\PUC.LDSI.DataBase.csproj",
+        "packagesPath": "C:\\Users\\PICHAU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.DataBase\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PICHAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,8 +92,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
-                "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
               }
             }
           }
@@ -137,24 +134,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+    "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
         "projectName": "PUC.LDSI.Domain",
-        "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
-        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\obj\\",
+        "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj",
+        "packagesPath": "C:\\Users\\PICHAU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PICHAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -183,6 +177,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.Threading.Tasks": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -195,24 +193,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
+    "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
         "projectName": "PUC.LDSI.Identity",
-        "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
-        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\obj\\",
+        "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj",
+        "packagesPath": "C:\\Users\\PICHAU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PICHAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -275,24 +270,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj": {
+    "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj",
         "projectName": "PUC.LDSI.IoC",
-        "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj",
-        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.IoC\\obj\\",
+        "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj",
+        "packagesPath": "C:\\Users\\PICHAU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.IoC\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PICHAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -305,11 +297,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
-                "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj"
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj"
               },
-              "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
-                "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
               }
             }
           }
@@ -344,24 +336,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj": {
+    "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
+        "projectUniqueName": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
         "projectName": "PUC.LDSI.MVC",
-        "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
-        "packagesPath": "C:\\Users\\João Pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.MVC\\obj\\",
+        "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.MVC\\PUC.LDSI.MVC.csproj",
+        "packagesPath": "C:\\Users\\PICHAU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.MVC\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\João Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PICHAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -374,17 +363,17 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
-                "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj"
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Application\\PUC.LDSI.Application.csproj"
               },
-              "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
-                "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Domain\\PUC.LDSI.Domain.csproj"
               },
-              "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
-                "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj"
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.Identity\\PUC.LDSI.Identity.csproj"
               },
-              "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj": {
-                "projectPath": "C:\\Users\\João Pedro\\Desktop\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj"
+              "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj": {
+                "projectPath": "C:\\Users\\PICHAU\\source\\repos\\vouf\\PUC.LDSI.IoC\\PUC.LDSI.IoC.csproj"
               }
             }
           }
@@ -434,7 +423,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

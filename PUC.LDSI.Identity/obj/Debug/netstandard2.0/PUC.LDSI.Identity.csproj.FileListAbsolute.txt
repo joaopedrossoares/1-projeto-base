@@ -7,11 +7,10 @@ C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDS
 C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.AssemblyInfo.cs
 C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.dll
 C:\Users\Rafael\Desktop\Dev 1\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.pdb
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.dll
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.pdb
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.Identity\bin\Debug\netstandard2.0\PUC.LDSI.Identity.deps.json
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.Identity\bin\Debug\netstandard2.0\PUC.LDSI.Identity.dll
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.Identity\bin\Debug\netstandard2.0\PUC.LDSI.Identity.pdb
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.csproj.CoreCompileInputs.cache
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.AssemblyInfoInputs.cache
-C:\Users\Pedro Dias.Pedro-Pc\Desktop\vouf\vouf\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.AssemblyInfo.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Identity\bin\Debug\netstandard2.0\PUC.LDSI.Identity.deps.json
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Identity\bin\Debug\netstandard2.0\PUC.LDSI.Identity.dll
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Identity\bin\Debug\netstandard2.0\PUC.LDSI.Identity.pdb
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.AssemblyInfoInputs.cache
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.AssemblyInfo.cs
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.dll
+C:\Users\PICHAU\source\repos\vouf\PUC.LDSI.Identity\obj\Debug\netstandard2.0\PUC.LDSI.Identity.pdb
