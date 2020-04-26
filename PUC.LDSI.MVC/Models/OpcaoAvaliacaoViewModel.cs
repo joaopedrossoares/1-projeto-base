@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PUC.LDSI.MVC.Models
 {
@@ -12,6 +13,7 @@ namespace PUC.LDSI.MVC.Models
         [Key]
         public int Id { get; set; }
 
+        [ForeignKey("Id")]
         public int QuestaoId { get; set; }
 
         [Required(ErrorMessage = "A Descricao é requerido.")]
@@ -21,6 +23,7 @@ namespace PUC.LDSI.MVC.Models
         [Required(ErrorMessage = "A Verdadeira é requerido.")]
         public bool Verdadeira { get; set; }
 
-        public QuestaoAvaliacaoViewModel Questao { get; set; }
+        public QuestaoAvaliacaoViewModel Questao = new QuestaoAvaliacaoViewModel();
+
     }
 }

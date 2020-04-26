@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using PUC.LDSI.Domain.Entities;
 
 namespace PUC.LDSI.MVC.Models
 {
     public class AvaliacaoViewModel
     {
+
         [Key]
         public int Id { get; set; }
 
@@ -30,13 +32,21 @@ namespace PUC.LDSI.MVC.Models
         [DisplayName("Descricao")]
         public string Descricao { get; set; }
 
-        public List<QuestaoAvaliacaoViewModel> ListQuestaoAvaliacao { get; set; }
+        public List<QuestaoAvaliacaoViewModel> Questoes = new List<QuestaoAvaliacaoViewModel>();
 
-        /* TODO Conterá uma lógica de validação da avaliação;
-Será válida a avaliação que possua pelo menos uma questão e que todas as questões estejam válidas de acordo com as regras descritas no caso de uso US2 do nosso trabalho;
-Utilize na lógica validação pelo atributo Erros que será criado na QuestaoAvaliacaoViewModel.*/
-        public bool EhValida { get; set;}
-
-
+        public bool EhValida
+        {
+            get
+            {
+                if (Questoes.Count == 0)
+                    return false;
+                foreach (QuestaoAvaliacaoViewModel item in Questoes)
+                {
+                    if (!item.Erro.Equals(""))
+                        return false;
+                }
+                return true;
+            }
+        }
     }
 }

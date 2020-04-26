@@ -1,0 +1,42 @@
+﻿@model OpcaoAvaliacaoViewModel
+
+@{
+    ViewData["Title"] = "Excluir Questão";
+
+    ViewData["Subtitle"] = ViewBag.Questao.Avaliacao.Disciplina + " / " + ViewBag.Questao.Avaliacao.Materia + " / " + ViewBag.Questao.Avaliacao.Descricao;
+
+    ViewData["Questao"] = ViewBag.Questao.Enunciado;
+
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>@ViewData["Subtitle"]</h4>
+
+<h5>@ViewData["Questao"]</h5>
+
+<h4>Confirmar a exclusão desta opção?</h4>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Verdadeira)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Verdadeira)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" asp-route-questaoId="@Model.QuestaoId" value="Excluir" class="btn btn-default" />
+        <a asp-action="Index" asp-route-questaoId="@Model.QuestaoId" class="btn btn-default">Cancelar</a>
+    </form>
+</div>
