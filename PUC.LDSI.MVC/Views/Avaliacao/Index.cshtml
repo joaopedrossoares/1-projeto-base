@@ -1,0 +1,71 @@
+﻿@model IEnumerable<AvaliacaoViewModel>
+
+@{
+    ViewData["Title"] = "Avaliações";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-default">Criar Nova</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Professor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disciplina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Materia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                Ações
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EhValida)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Professor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Disciplina)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Materia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit" title="Editar"></i></a>
+                    <a asp-action="Index" asp-controller="QuestaoAvaliacao" asp-route-avaliacaoId="@item.Id">
+                        <i class="fas fa-tools" title="Construir Avaliação"></i>
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash" title="Excluir"></i></a>
+                </td>
+                <td>
+                    @if (item.EhValida)
+                    {
+                        <i style="color: #00ff00" class="fas fa-check" title="Avaliação OK"></i>
+                    }
+                    else
+                    {
+                        <i style="color: #ff0000" class="fas fa-times" title="Esta avaliação possui pendências a resolver!"></i>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

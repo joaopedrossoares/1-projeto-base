@@ -1,0 +1,51 @@
+﻿@model QuestaoAvaliacaoViewModel
+
+@{
+    ViewData["Title"] = "Avaliação";
+    ViewData["Subtitle"] = Model.Avaliacao.Disciplina + " / " + Model.Avaliacao.Materia + " / " + Model.Avaliacao.Descricao;
+    ViewData["Questao"] = Model.Enunciado;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>@ViewData["Subtitle"]</h4>
+
+<h5>@ViewData["Questao"]</h5>
+
+<p>
+    <a asp-action="Create" asp-route-questaoId="@Model.Id" class="btn btn-default">Nova Opção</a>
+    <a asp-action="Index" asp-controller="QuestaoAvaliacao" asp-route-avaliacaoId="@Model.AvaliacaoId" class="btn btn-default">Voltar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Opção
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Ações
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Opcoes)
+        {
+            <tr>
+                <td>
+                    @{ var opcao = item.Verdadeira ? "V" : "F"; }
+                    @opcao
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit" title="Editar"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash" title="Excluir"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
