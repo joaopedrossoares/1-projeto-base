@@ -16,25 +16,25 @@ namespace PUC.LDSI.DataBase.Repository
             _context = context;
         }
 
+        public async Task<List<Avaliacao>> ListarAvaliacoesDoProfessorAsync(int professorId)
+        {
+            var query = _context.Avaliacao
+                .Include(x => x.Questoes).ThenInclude(y => y.Opcoes)
+                .Include(x => x.Professor)
+                .Where(x => x.Professor.Id == professorId);
+
+            return await query.ToListAsync();
+        }
+
         public override async Task<Avaliacao> ObterAsync(int id)
         {
             var avaliacao = await _context.Avaliacao
-                .Include(x => x.Questoes)
-                .ThenInclude(questoes => questoes.OpcoesAvaliacoes)
                 .Include(x => x.Professor)
-                .Where(x => x.Id == id).FirstOrDefaultAsync();
+                .Include(x => x.Questoes).ThenInclude(y => y.Opcoes)
+                .Include(x => x.Publicacoes)
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             return avaliacao;
         }
-
-        public virtual Task<List<Avaliacao>> ListarAvaliacoesDoProfessorAsync(int professorId)
-        {
-            var avaliacoes =  _context.Avaliacao
-                .Include(x => x.Professor)
-                .Where(x => x.ProfessorId == professorId).ToListAsync();
-
-            return avaliacoes;
-        }
-
     }
 }

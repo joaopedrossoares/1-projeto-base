@@ -9,8 +9,6 @@ namespace PUC.LDSI.DataBase
 {
     public class AppDbContext : DbContext
     {
-        //DbSets - example
-        //public DbSet<EntityName> EntityName { get; set; }
         public DbSet<Aluno> Aluno { get; set; }
         public DbSet<Avaliacao> Avaliacao { get; set; }
         public DbSet<OpcaoAvaliacao> OpcaoAvaliacao { get; set; }
@@ -18,7 +16,7 @@ namespace PUC.LDSI.DataBase
         public DbSet<Professor> Professor { get; set; }
         public DbSet<Prova> Prova { get; set; }
         public DbSet<Publicacao> Publicacao { get; set; }
-        public DbSet<Questao> Questao { get; set; }
+        public DbSet<QuestaoAvaliacao> QuestaoAvaliacao { get; set; }
         public DbSet<QuestaoProva> QuestaoProva { get; set; }
         public DbSet<Turma> Turma { get; set; }
 
@@ -31,8 +29,7 @@ namespace PUC.LDSI.DataBase
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
 
-            //Example - Apply Configuration
-            //modelbuilder.ApplyConfiguration(new EntityNameConfiguration());
+            modelbuilder.ApplyConfiguration(new TurmaConfiguration());
             modelbuilder.ApplyConfiguration(new AlunoConfiguration());
             modelbuilder.ApplyConfiguration(new AvaliacaoConfiguration());
             modelbuilder.ApplyConfiguration(new OpcaoAvaliacaoConfiguration());
@@ -42,7 +39,6 @@ namespace PUC.LDSI.DataBase
             modelbuilder.ApplyConfiguration(new PublicacaoConfiguration());
             modelbuilder.ApplyConfiguration(new QuestaoAvaliacaoConfiguration());
             modelbuilder.ApplyConfiguration(new QuestaoProvaConfiguration());
-            modelbuilder.ApplyConfiguration(new TurmaConfiguration());
 
             base.OnModelCreating(modelbuilder);
         }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using PUC.LDSI.Domain.Entities;
-using PUC.LDSI.Domain.Interfaces.Repository;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
+using PUC.LDSI.Domain.Entities;
+using PUC.LDSI.Domain.Interfaces.Repository;
 
 namespace PUC.LDSI.DataBase.Repository
 {

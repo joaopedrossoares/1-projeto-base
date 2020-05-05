@@ -22,31 +22,30 @@ namespace PUC.LDSI.MVC.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly IProfessorAppService _professorAppService;
-        private readonly ITurmaRepository _turmaRepository;
-        private readonly ITurmaAppService _turmaAppService;
         private readonly SignInManager<Usuario> _signInManager;
         private readonly UserManager<Usuario> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
-
-       
+        
+        private readonly IProfessorAppService _professorAppService;
+        private readonly ITurmaRepository _turmaRepository;
+        private readonly ITurmaAppService _turmaAppService;
 
         public RegisterModel(
             UserManager<Usuario> userManager,
             SignInManager<Usuario> signInManager,
             ILogger<RegisterModel> logger,
+            IEmailSender emailSender,
             IProfessorAppService professorAppService,
             ITurmaRepository turmaRepository,
-            ITurmaAppService turmaAppService,
-            IEmailSender emailSender)
+            ITurmaAppService turmaAppService)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _logger = logger;
             _professorAppService = professorAppService;
             _turmaRepository = turmaRepository;
             _turmaAppService = turmaAppService;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _logger = logger;
             _emailSender = emailSender;
         }
 
@@ -84,6 +83,13 @@ namespace PUC.LDSI.MVC.Areas.Identity.Pages.Account
 
             [Display(Name = "Informe sua Turma")]
             public int TurmaId { get; set; }
+        }
+
+        public SelectList Turmas()
+        {
+            var turmas = _turmaRepository.ObterTodos().ToList();
+
+            return new SelectList(turmas, "Id", "Nome");
         }
 
         public void OnGet(string returnUrl = null)
@@ -131,12 +137,5 @@ namespace PUC.LDSI.MVC.Areas.Identity.Pages.Account
             }
             return Page();
         }
-        public SelectList Turmas()
-        {
-            var turmas = _turmaRepository.ObterTodos().ToList();
-
-            return new SelectList(turmas, "Id", "Nome");
-        }
-
     }
 }

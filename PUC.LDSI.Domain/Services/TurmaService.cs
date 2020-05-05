@@ -1,33 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using PUC.LDSI.Domain.Interfaces.Services;
-using PUC.LDSI.Domain.Interfaces.Repository;
-using System.Threading.Tasks;
-using PUC.LDSI.Domain.Entities;
+﻿using PUC.LDSI.Domain.Entities;
 using PUC.LDSI.Domain.Exception;
+using PUC.LDSI.Domain.Interfaces.Repository;
+using PUC.LDSI.Domain.Interfaces.Services;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace PUC.LDSI.Domain.Services
 {
     public class TurmaService : ITurmaService
     {
         private readonly ITurmaRepository _turmaRepository;
+        private readonly IAlunoRepository _alunoRepository;
 
-        public TurmaService(ITurmaRepository turmaRepository)
+        public TurmaService(ITurmaRepository turmaRepository, IAlunoRepository alunoRepository)
         {
             _turmaRepository = turmaRepository;
+            _alunoRepository = alunoRepository;
         }
 
         public async Task<int> AdicionarTurmaAsync(string descricao)
         {
             var turma = new Turma() { Nome = descricao };
+
             var erros = turma.Validate();
 
             if (erros.Length == 0)
             {
                 await _turmaRepository.AdicionarAsync(turma);
+
                 _turmaRepository.SaveChanges();
+
                 return turma.Id;
             }
             else throw new DomainException(erros);
@@ -36,7 +39,9 @@ namespace PUC.LDSI.Domain.Services
         public async Task<int> AlterarTurmaAsync(int id, string descricao)
         {
             var turma = await _turmaRepository.ObterAsync(id);
-            turma.Nome = descricao; ;
+
+            turma.Nome = descricao;
+
             var erros = turma.Validate();
 
             if (erros.Length == 0)
@@ -52,11 +57,14 @@ namespace PUC.LDSI.Domain.Services
         {
             var turma = await _turmaRepository.ObterAsync(id);
 
-            if(turma.Alunos?.Count > 0)
+            if (turma.Alunos?.Count > 0)
                 throw new DomainException("Não é possível excluir uma turma que possui alunos matriculados!");
+
             _turmaRepository.Excluir(id);
+
             _turmaRepository.SaveChanges();
         }
+
         public List<Turma> ListarTurmas()
         {
             var lista = _turmaRepository.ObterTodos().ToList();
@@ -67,17 +75,25 @@ namespace PUC.LDSI.Domain.Services
         public async Task<Turma> ObterAsync(int id)
         {
             var turma = await _turmaRepository.ObterAsync(id);
+
             return turma;
         }
-        public async Task IncluirAlunoAsync(int turmaid, string nomeAluno)
+
+        public async Task<int> IncluirAlunoAsync(int turmaId, string nomeAluno)
         {
-            var turma = await _turmaRepository.ObterAsync(turmaid);
+            var aluno = new Aluno() { Nome = nomeAluno, TurmaId = turmaId };
 
-            var aluno = new Aluno() { Nome = nomeAluno };
+            var erros = aluno.Validate();
 
-            turma.Alunos.Add(aluno);
+            if (erros.Length == 0)
+            {
+                await _alunoRepository.AdicionarAsync(aluno);
+
+                _alunoRepository.SaveChanges();
+
+                return aluno.Id;
+            }
+            else throw new DomainException(erros);
         }
-
-
     }
 }
