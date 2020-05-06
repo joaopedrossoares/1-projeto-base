@@ -2,20 +2,20 @@
 
 @{
     ViewData["Title"] = "Nova Opção";
-    ViewData["Subtitle"] = ViewBag.Questao.Avaliacao.Disciplina + " / " + ViewBag.Questao.Avaliacao.Materia + " / " + ViewBag.Questao.Avaliacao.Descricao;
-    ViewData["Questao"] = ViewBag.Questao.Enunciado;
 }
 
 <h2>@ViewData["Title"]</h2>
-<h4>@ViewData["Subtitle"]</h4>
-<h5>@ViewData["Questao"]</h5>
+
+<h4>@Html.DisplayFor(model => model.Questao.Avaliacao.Materia) / @Html.DisplayFor(model => model.Questao.Avaliacao.Disciplina) / @Html.DisplayFor(model => model.Questao.Avaliacao.Descricao)</h4>
+
+<h5>@Html.DisplayFor(model => model.Questao.Enunciado)</h5>
 
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="QuestaoId" value="@ViewBag.QuestaoId" />&nbsp;
+            <input type="hidden" asp-for="QuestaoId" />
             <div class="form-group">
                 <label asp-for="Descricao" class="control-label"></label>
                 <input asp-for="Descricao" class="form-control" />
@@ -30,12 +30,11 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-default" />
-                <a asp-action="Index" asp-route-questaoId="@ViewBag.QuestaoId" class="btn btn-default">Cancelar</a>
+                <a asp-action="Index" asp-route-questaoId="@Model.QuestaoId" class="btn btn-default">Cancelar</a>
             </div>
         </form>
     </div>
 </div>
-
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

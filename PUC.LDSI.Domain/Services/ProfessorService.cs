@@ -1,6 +1,7 @@
 ﻿using PUC.LDSI.Domain.Entities;
 using PUC.LDSI.Domain.Exception;
 using PUC.LDSI.Domain.Interfaces.Repository;
+using PUC.LDSI.Domain.Interfaces.Services;
 using System.Threading.Tasks;
 
 namespace PUC.LDSI.Domain.Services

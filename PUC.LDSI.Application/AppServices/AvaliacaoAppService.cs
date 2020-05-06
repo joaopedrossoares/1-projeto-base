@@ -1,8 +1,6 @@
 ﻿using PUC.LDSI.Application.Interfaces;
 using PUC.LDSI.Domain.Interfaces.Services;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PUC.LDSI.Application.AppServices
@@ -118,9 +116,9 @@ namespace PUC.LDSI.Application.AppServices
         {
             try
             {
-                await _avaliacaoService.ExcluirOpcaoAvaliacaoAsync(id);
+                var retorno = await _avaliacaoService.ExcluirOpcaoAvaliacaoAsync(id);
 
-                return new DataResult<int>(1);
+                return new DataResult<int>(retorno);
             }
             catch (Exception ex)
             {
@@ -132,9 +130,9 @@ namespace PUC.LDSI.Application.AppServices
         {
             try
             {
-                await _avaliacaoService.ExcluirQuestaoAvaliacaoAsync(id);
+                var retorno = await _avaliacaoService.ExcluirQuestaoAvaliacaoAsync(id);
 
-                return new DataResult<int>(1);
+                return new DataResult<int>(retorno);
             }
             catch (Exception ex)
             {

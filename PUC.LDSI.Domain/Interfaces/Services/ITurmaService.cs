@@ -1,7 +1,6 @@
-﻿using System;
+﻿using PUC.LDSI.Domain.Entities;
+using System;
 using System.Collections.Generic;
-using System.Text;
-using PUC.LDSI.Domain.Entities;
 using System.Threading.Tasks;
 
 namespace PUC.LDSI.Domain.Interfaces.Services
@@ -13,5 +12,6 @@ namespace PUC.LDSI.Domain.Interfaces.Services
         List<Turma> ListarTurmas();
         Task<Turma> ObterAsync(int id);
         Task ExcluirAsync(int id);
+        Task<int> IncluirAlunoAsync(int turmaId, string nomeAluno);
     }
 }

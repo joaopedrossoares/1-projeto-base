@@ -1,33 +1,25 @@
 ﻿@model QuestaoAvaliacaoViewModel
 
 @{
-    ViewData["Title"] = "Avaliação";
-    ViewData["Subtitle"] = Model.Avaliacao.Disciplina + " / " + Model.Avaliacao.Materia + " / " + Model.Avaliacao.Descricao;
-    ViewData["Questao"] = Model.Enunciado;
+    ViewData["Title"] = "Opções da Avaliação";
 }
 
-<h2>@ViewData["Title"]</h2>
+<h2>Avaliação</h2>
 
-<h4>@ViewData["Subtitle"]</h4>
+<h4>@Html.DisplayFor(model => model.Avaliacao.Materia) / @Html.DisplayFor(model => model.Avaliacao.Disciplina) / @Html.DisplayFor(model => model.Avaliacao.Descricao)</h4>
 
-<h5>@ViewData["Questao"]</h5>
+<h5>@Html.DisplayFor(model => model.Enunciado)</h5>
 
 <p>
     <a asp-action="Create" asp-route-questaoId="@Model.Id" class="btn btn-default">Nova Opção</a>
-    <a asp-action="Index" asp-controller="QuestaoAvaliacao" asp-route-avaliacaoId="@Model.AvaliacaoId" class="btn btn-default">Voltar</a>
+    <a asp-action="Index" asp-route-avaliacaoId="@Model.AvaliacaoId" asp-controller="QuestaoAvaliacao" class="btn btn-default">Voltar</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                Opção
-            </th>
-            <th>
-                Descrição
-            </th>
-            <th>
-                Ações
-            </th>
+            <th>Opção</th>
+            <th>Descrição</th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -35,15 +27,14 @@
         {
             <tr>
                 <td>
-                    @{ var opcao = item.Verdadeira ? "V" : "F"; }
-                    @opcao
+                    @(item.Verdadeira ? "V" : "F")
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Descricao)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit" title="Editar"></i></a>
-                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash" title="Excluir"></i></a>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit" title="Editar Opção"></i></a>&nbsp;
+                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="far fa-trash-alt" title="Excluir Opção"></i></a>&nbsp;
                 </td>
             </tr>
         }

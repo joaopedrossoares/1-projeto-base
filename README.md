@@ -1,43 +1,20 @@
-# Guia para desenvolvimento do projeto.
-### Caso seja sua primeira vez no github siga os passos abaixo. Caso contrário passe para o próximo tópico.
-*Caso o computador não possua o git instalado, favor instalar.* [Link para instalação](https://git-scm.com/download/win)
-```
-git config --global user.name "Seu nome"
-git config --global user.email "seuemail@email.com"
-```
-Para clonar o projeto é necessário que sejam executados tais comandos.
-```
-git clone https://github.com/joaopedrossoares/vouf.git
-cd vouf
-git init
-```
-Após o projeto clonado execute o comando para adicionar um remote ao seu git local.
-```
-git remote add origin https://github.com/joaopedrossoares/vouf.git
-```
-Execute o seguinte comando para conferir se está correto. 
-```
-git remote -v
-```
-Execute o seguinte comando para atualizar seu repositório local.
-```
-git pull origin master
-```
-### Para realizar suas tarefas é necessário que uma branch seja criada.
+# Introduction 
+TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
-Para criar uma branch execute o comando: 
-```
-git checkout -b NOMEDASUABRANCH
-```
+# Getting Started
+TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
+1.	Installation process
+2.	Software dependencies
+3.	Latest releases
+4.	API references
 
-#### Execute suas tarefas... Quando terminá-las, executar os seguintes comandos:
-```
-git pull origin master
-git status
-git add nomeDoArquivoModificado nomeDoOutroArquivo ePorAiVai
-git status
-git commit -m "mensagem explicando"
-git push origin NOMEDASUABRANCH
-```
+# Build and Test
+TODO: Describe and show how to build your code and run the tests. 
 
+# Contribute
+TODO: Explain how other users and developers can contribute to make your code better. 
 
+If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
+- [ASP.NET Core](https://github.com/aspnet/Home)
+- [Visual Studio Code](https://github.com/Microsoft/vscode)
+- [Chakra Core](https://github.com/Microsoft/ChakraCore)

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PUC.LDSI.Domain.Entities.Turma>
+﻿@model IEnumerable<TurmaViewModel>
 
 @{
     ViewData["Title"] = "Turmas";
@@ -26,8 +26,8 @@
                     @Html.DisplayFor(modelItem => item.Nome)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit" title="Editar Questão"></i></a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="far fa-trash-alt" title="Excluir Questão"></i></a>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit" title="Editar Questão"></i></a>&nbsp;
+                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="far fa-trash-alt" title="Excluir Questão"></i></a>&nbsp;
                 </td>
             </tr>
         }

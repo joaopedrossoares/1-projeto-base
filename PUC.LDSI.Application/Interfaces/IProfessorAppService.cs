@@ -2,9 +2,8 @@
 
 namespace PUC.LDSI.Application.Interfaces
 {
-       public interface IProfessorAppService
-       {
-            Task<DataResult<int>> IncluirProfessorAsync(string nome);
-       }
-   
+    public interface IProfessorAppService
+    {
+        Task<DataResult<int>> IncluirProfessorAsync(string nome);
+    }
 }

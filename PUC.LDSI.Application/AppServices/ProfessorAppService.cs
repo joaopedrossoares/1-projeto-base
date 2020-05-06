@@ -1,6 +1,5 @@
 ﻿using PUC.LDSI.Application.Interfaces;
 using PUC.LDSI.Domain.Interfaces.Services;
-using PUC.LDSI.Domain.Services;
 using System;
 using System.Threading.Tasks;
 
@@ -22,7 +21,6 @@ namespace PUC.LDSI.Application.AppServices
                 var retorno = await _professorService.IncluirProfessorAsync(nome);
 
                 return new DataResult<int>(retorno);
-
             }
             catch (Exception ex)
             {

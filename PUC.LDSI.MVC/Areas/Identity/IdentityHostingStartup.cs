@@ -15,11 +15,11 @@ namespace PUC.LDSI.MVC.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => 
-            {
+            builder.ConfigureServices((context, services) => {
                 services.AddDbContext<SecurityContext>(
                     opc => opc.UseSqlServer(context.Configuration.GetConnectionString("ConexaoIdentity"),
                     prj => prj.MigrationsAssembly("PUC.LDSI.Identity")));
+
                 services.AddDefaultIdentity<Usuario>().AddEntityFrameworkStores<SecurityContext>();
 
                 services.Configure<IdentityOptions>(options =>

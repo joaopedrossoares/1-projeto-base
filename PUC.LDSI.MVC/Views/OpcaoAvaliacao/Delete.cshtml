@@ -2,21 +2,15 @@
 
 @{
     ViewData["Title"] = "Excluir Questão";
-
-    ViewData["Subtitle"] = ViewBag.Questao.Avaliacao.Disciplina + " / " + ViewBag.Questao.Avaliacao.Materia + " / " + ViewBag.Questao.Avaliacao.Descricao;
-
-    ViewData["Questao"] = ViewBag.Questao.Enunciado;
-
 }
 
 <h2>@ViewData["Title"]</h2>
 
-<h4>@ViewData["Subtitle"]</h4>
+<h4>@Html.DisplayFor(model => model.Questao.Avaliacao.Materia) / @Html.DisplayFor(model => model.Questao.Avaliacao.Disciplina) / @Html.DisplayFor(model => model.Questao.Avaliacao.Descricao)</h4>
 
-<h5>@ViewData["Questao"]</h5>
+<h5>@Html.DisplayFor(model => model.Questao.Enunciado)</h5>
 
-<h4>Confirmar a exclusão desta opção?</h4>
-
+<h4>Confirma a exclusão desta questão?</h4>
 <div>
     <hr />
     <dl class="dl-horizontal">
@@ -36,7 +30,7 @@
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" asp-route-questaoId="@Model.QuestaoId" value="Excluir" class="btn btn-default" />
+        <input type="submit" value="Excluir" class="btn btn-default" />
         <a asp-action="Index" asp-route-questaoId="@Model.QuestaoId" class="btn btn-default">Cancelar</a>
     </form>
 </div>

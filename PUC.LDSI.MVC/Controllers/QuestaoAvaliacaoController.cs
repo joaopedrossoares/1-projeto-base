@@ -1,162 +1,144 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using PUC.LDSI.Application.Interfaces;
-using PUC.LDSI.DataBase;
-using PUC.LDSI.Domain.Entities;
 using PUC.LDSI.Domain.Interfaces.Repository;
 using PUC.LDSI.Identity.Entities;
 using PUC.LDSI.MVC.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PUC.LDSI.MVC.Controllers
 {
     public class QuestaoAvaliacaoController : BaseController
     {
-
         private readonly IAvaliacaoAppService _avaliacaoAppService;
         private readonly IAvaliacaoRepository _avaliacaoRepository;
-        private readonly IQuestaoAvaliacaoRepository _questaoRepository;
-        //IQuestaoAvaliacaoRepository
+        private readonly IQuestaoAvaliacaoRepository _questaoAvaliacaoRepository;
+
         public QuestaoAvaliacaoController(UserManager<Usuario> user,
-                                     IAvaliacaoAppService avaliacaoAppService,
-                                     IQuestaoAvaliacaoRepository questaoRepository,
-                                     IAvaliacaoRepository avaliacaoRepository) : base(user)
+                                          IAvaliacaoAppService avaliacaoAppService,
+                                          IAvaliacaoRepository avaliacaoRepository,
+                                          IQuestaoAvaliacaoRepository questaoAvaliacaoRepository) : base(user)
         {
             _avaliacaoAppService = avaliacaoAppService;
-            _questaoRepository = questaoRepository;
             _avaliacaoRepository = avaliacaoRepository;
-        }
-        // GET: Avaliacao
-        public async Task<IActionResult> Index(int avaliacaoId)
-        {
-            var result = _avaliacaoRepository.ObterAsync(avaliacaoId);
-            var avaliacoes = Mapper.Map<AvaliacaoViewModel>(result.Result);
-            return View(avaliacoes);
+            _questaoAvaliacaoRepository = questaoAvaliacaoRepository;
         }
 
-
-
-        // GET: Avaliacao/Create
-        public IActionResult Create(int avaliacaoId)
+        public async Task<IActionResult> Index(int? avaliacaoId)
         {
-            var result = _avaliacaoRepository.ObterAsync(avaliacaoId);
-            ViewData["Avaliacao"] = Mapper.Map<AvaliacaoViewModel>(result.Result);
+            if (avaliacaoId == null) { return NotFound(); }
+
+            var result = await _avaliacaoRepository.ObterAsync(avaliacaoId.Value);
+
+            var avaliacao = Mapper.Map<AvaliacaoViewModel>(result);
+
+            return View(avaliacao);
+        }
+
+        public async Task<IActionResult> Create(int? avaliacaoId)
+        {
+            if (avaliacaoId == null) { return NotFound(); }
+
+            var result = await _avaliacaoRepository.ObterAsync(avaliacaoId.Value);
+
+            var avaliacao = Mapper.Map<AvaliacaoViewModel>(result);
+
+            var questao = new QuestaoAvaliacaoViewModel()
+            {
+                Avaliacao = avaliacao,
+                AvaliacaoId = avaliacao.Id
+            };
+
             ViewData["OpcoesTipo"] = ObterOpcoesTipo();
-            return View();
+
+            return View(questao);
         }
 
-        // POST: Avaliação/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,AvaliacaoId,Tipo,Enunciado,Avaliacao,Opcoes")] Questao questaoAvaliacao)
+        public async Task<IActionResult> Create([Bind("AvaliacaoId,Tipo,Enunciado")] QuestaoAvaliacaoViewModel questao)
         {
             if (ModelState.IsValid)
             {
-                var result = await _avaliacaoAppService.AdicionarQuestaoAvaliacaoAsync(questaoAvaliacao.AvaliacaoId, questaoAvaliacao.Tipo, questaoAvaliacao.Enunciado);
+                var result = await _avaliacaoAppService.AdicionarQuestaoAvaliacaoAsync(questao.AvaliacaoId, questao.Tipo, questao.Enunciado);
 
                 if (result.Success)
-                    return RedirectToAction(nameof(Index), new { avaliacaoId = questaoAvaliacao.AvaliacaoId });
+                    return RedirectToAction(nameof(Index), new { avaliacaoId = questao.AvaliacaoId });
                 else
                     throw result.Exception;
             }
-            return View(questaoAvaliacao);
+
+            return View(questao);
         }
 
-        // GET: Avaliacao/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) { return NotFound(); }
 
-            var questao = await _questaoRepository.ObterAsync(id.Value);
+            var result = await _questaoAvaliacaoRepository.ObterAsync(id.Value);
 
-            if (questao == null)
-            {
-                return NotFound();
-            }
+            if (result == null) { return NotFound(); }
 
-            var viewModel = Mapper.Map<QuestaoAvaliacaoViewModel>(questao);
+            var questao = Mapper.Map<QuestaoAvaliacaoViewModel>(result);
+
             ViewData["OpcoesTipo"] = ObterOpcoesTipo(questao.Tipo);
 
-            return View(viewModel);
+            return View(questao);
         }
 
-        // POST: Avaliacao/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-        public async Task<IActionResult> Edit(int id, [Bind("Id,AvaliacaoId,Tipo,Enunciado,Avaliacao,Opcoes")] Questao questaoAvaliacao)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,AvaliacaoId,Tipo,Enunciado")] QuestaoAvaliacaoViewModel questao)
         {
-            if (id != questaoAvaliacao.Id)
-            {
-                return NotFound();
-            }
+            if (id != questao.Id) { return NotFound(); }
 
             if (ModelState.IsValid)
             {
-                var result = await _avaliacaoAppService.AlterarQuestaoAvaliacaoAsync(questaoAvaliacao.Id, questaoAvaliacao.Tipo, questaoAvaliacao.Enunciado);
+                var result = await _avaliacaoAppService.AlterarQuestaoAvaliacaoAsync(questao.Id, questao.Tipo, questao.Enunciado);
 
                 if (result.Success)
-                    return RedirectToAction(nameof(Index), new { avaliacaoId = questaoAvaliacao.AvaliacaoId });
+                    return RedirectToAction(nameof(Index), new { questao.AvaliacaoId });
                 else
                     throw result.Exception;
             }
-            return View(questaoAvaliacao);
+
+            return View(questao);
         }
 
-        // GET: Avaliacao/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) { return NotFound(); }
 
-            var result = _avaliacaoRepository.ObterAsync(id.Value);
+            var result = await _questaoAvaliacaoRepository.ObterAsync(id.Value);
 
+            if (result == null) { return NotFound(); }
 
-            var questaoAvaliacao = await _questaoRepository.ObterAsync(id.Value);
+            var questao = Mapper.Map<QuestaoAvaliacaoViewModel>(result);
 
-            if (questaoAvaliacao == null)
-            {
-                return NotFound();
-            }
-
-            var viewModel = Mapper.Map<QuestaoAvaliacaoViewModel>(questaoAvaliacao);
-
-            return View(viewModel);
+            return View(questao);
         }
 
-        // POST: Avaliacao/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id, Questao questaoAvaliacao)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var result = await _avaliacaoAppService.ExcluirQuestaoAvaliacaoAsync(id);
 
             if (result.Success)
-                return RedirectToAction(nameof(Index), new { avaliacaoId = questaoAvaliacao.AvaliacaoId });
+                return RedirectToAction(nameof(Index), new { avaliacaoId = result.Data });
             else
                 throw result.Exception;
-
         }
+
         private List<SelectListItem> ObterOpcoesTipo(int tipoId = 0)
         {
             return new List<SelectListItem>() {
-        new SelectListItem{ Text="Múltipla Escolha", Value = "1", Selected = tipoId == 1 },
-        new SelectListItem{ Text="Verdadeiro ou Falso", Value = "2", Selected = tipoId == 2 }
-    };
+                new SelectListItem{ Text="Múltipla Escolha", Value = "1", Selected = tipoId == 1 },
+                new SelectListItem{ Text="Verdadeiro ou Falso", Value = "2", Selected = tipoId == 2 }
+            };
         }
     }
 }
-

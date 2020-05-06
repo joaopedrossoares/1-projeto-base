@@ -4,7 +4,7 @@
     ViewData["Title"] = "Avaliações";
 }
 
-<h2>@ViewData["Title"]</h2>
+<h2>Avaliações</h2>
 
 <p>
     <a asp-action="Create" class="btn btn-default">Criar Nova</a>
@@ -12,58 +12,32 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Professor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Disciplina)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Materia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                Ações
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EhValida)
-            </th>
+            <th>Professor</th>
+            <th>Disciplina</th>
+            <th>Matéria</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+            <th>Válida</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
+                <td>@Html.DisplayFor(modelItem => item.Professor)</td>
+                <td>@Html.DisplayFor(modelItem => item.Disciplina)</td>
+                <td>@Html.DisplayFor(modelItem => item.Materia)</td>
+                <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Professor)
+                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit" title="Editar Avaliação"></i></a>&nbsp;
+                    <a asp-action="Index" asp-controller="QuestaoAvaliacao" asp-route-avaliacaoId="@item.Id"><i class="fas fa-tools" title="Construir Avaliação"></i></a>&nbsp;
+                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="far fa-trash-alt" title="Excluir Avaliação"></i></a>&nbsp;
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Disciplina)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Materia)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit" title="Editar"></i></a>
-                    <a asp-action="Index" asp-controller="QuestaoAvaliacao" asp-route-avaliacaoId="@item.Id">
-                        <i class="fas fa-tools" title="Construir Avaliação"></i>
-                    </a>
-                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash" title="Excluir"></i></a>
-                </td>
-                <td>
-                    @if (item.EhValida)
-                    {
-                        <i style="color: #00ff00" class="fas fa-check" title="Avaliação OK"></i>
-                    }
-                    else
-                    {
-                        <i style="color: #ff0000" class="fas fa-times" title="Esta avaliação possui pendências a resolver!"></i>
-                    }
+                <td style="@(item.EhValida ? "color:green" : "color:red")">
+                    <i 
+                       class="@(item.EhValida ? "fas fa-check" : "fas fa-times")" 
+                       title="@(item.EhValida ? "Avaliação OK" : "Esta avaliação possui pendências a resolver!")"
+                    ></i>
                 </td>
             </tr>
         }

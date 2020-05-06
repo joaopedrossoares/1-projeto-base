@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using PUC.LDSI.Application.Interfaces;
+﻿using PUC.LDSI.Application.Interfaces;
 using PUC.LDSI.Domain.Entities;
-using System.Threading.Tasks;
 using PUC.LDSI.Domain.Interfaces.Services;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PUC.LDSI.Application.AppServices
 {
@@ -22,6 +21,7 @@ namespace PUC.LDSI.Application.AppServices
             try
             {
                 var retorno = await _turmaService.AdicionarTurmaAsync(descricao);
+
                 return new DataResult<int>(retorno);
             }
             catch (Exception ex)
@@ -35,6 +35,7 @@ namespace PUC.LDSI.Application.AppServices
             try
             {
                 var retorno = await _turmaService.AlterarTurmaAsync(id, descricao);
+
                 return new DataResult<int>(retorno);
             }
             catch (Exception ex)
@@ -48,6 +49,7 @@ namespace PUC.LDSI.Application.AppServices
             try
             {
                 await _turmaService.ExcluirAsync(id);
+
                 return new DataResult<int>(1);
             }
             catch (Exception ex)
@@ -56,22 +58,12 @@ namespace PUC.LDSI.Application.AppServices
             }
         }
 
-        public async Task<DataResult<int>> IncluirAlunoAsync(int turmaId, string nomeAluno)
-        {
-            var turma = await _turmaService.ObterAsync(turmaId);
-
-            var aluno = new Aluno() { Nome = nomeAluno };
-
-            turma.Alunos.Add(aluno);
-
-            return new DataResult<int>(1);
-        }
-
         public DataResult<List<Turma>> ListarTurmas()
         {
             try
             {
                 var retorno = _turmaService.ListarTurmas();
+
                 return new DataResult<List<Turma>>(retorno);
             }
             catch (Exception ex)
@@ -85,11 +77,26 @@ namespace PUC.LDSI.Application.AppServices
             try
             {
                 var retorno = await _turmaService.ObterAsync(id);
+
                 return new DataResult<Turma>(retorno);
             }
             catch (Exception ex)
             {
                 return new DataResult<Turma>(ex);
+            }
+        }
+
+        public async Task<DataResult<int>> IncluirAlunoAsync(int turmaId, string nomeAluno)
+        {
+            try
+            {
+                var retorno = await _turmaService.IncluirAlunoAsync(turmaId, nomeAluno);
+
+                return new DataResult<int>(retorno);
+            }
+            catch (Exception ex)
+            {
+                return new DataResult<int>(ex);
             }
         }
     }
