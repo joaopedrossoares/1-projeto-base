@@ -14,10 +14,12 @@ namespace PUC.LDSI.Domain.Services
         private readonly IAvaliacaoRepository _avaliacaoRepository;
         private readonly IOpcaoAvaliacaoRepository _opcaoAvaliacaoRepository;
         private readonly IQuestaoAvaliacaoRepository _questaoAvaliacaoRepository;
+        private readonly IPublicacaoRepository _publicacaoRepository;
 
         public AvaliacaoService(IAvaliacaoRepository avaliacaoRepository,
                                 IOpcaoAvaliacaoRepository opcaoAvaliacaoRepository,
-                                IQuestaoAvaliacaoRepository questaoAvaliacaoRepository)
+                                IQuestaoAvaliacaoRepository questaoAvaliacaoRepository,
+                                IPublicacaoRepository publicacaoRepository)
         {
             _avaliacaoRepository = avaliacaoRepository;
             _opcaoAvaliacaoRepository = opcaoAvaliacaoRepository;
@@ -210,6 +212,61 @@ namespace PUC.LDSI.Domain.Services
                 if (questaoGravada.Tipo == 1 && questaoGravada.Opcoes.Where(x => x.Verdadeira).Any())
                     throw new DomainException("Já existe uma opção marcada como verdadeira para essa questão.");
             }
+        }
+        public async Task<int> AdicionarPublicacaoAsync(int professorId, int avaliacaoId, int turmaId, DateTime dataInicio, DateTime dataFim, int valorProva)
+        {
+            var publicacao = new Publicacao() { AvaliacaoId = avaliacaoId, TurmaId = turmaId, DataInicio = dataInicio, DataFim = dataFim, ValorProva = valorProva };
+
+            var avaliacao = _avaliacaoRepository.ObterAsync(publicacao.AvaliacaoId).Result;
+
+            if (avaliacao.ProfessorId != professorId)
+                throw new DomainException("A avaliação informada não pertence ao professor logado!");
+
+            var erros = publicacao.Validate();
+
+            if (erros.Length == 0)
+            {
+                await _publicacaoRepository.AdicionarAsync(publicacao);
+
+                _avaliacaoRepository.SaveChanges();
+
+                return publicacao.Id;
+            }
+            else throw new DomainException(erros);
+        }
+        public async Task<int> AlterarPublicacaoAsync(int professorId, int id, DateTime dataInicio, DateTime dataFim, int valorProva)
+        {
+            var publicacao = await _publicacaoRepository.ObterAsync(id);
+
+            if (publicacao.Avaliacao.ProfessorId != professorId)
+                throw new DomainException("A avaliação informada não pertence ao professor logado!");
+
+            publicacao.DataInicio = dataInicio;
+            publicacao.DataFim = dataFim;
+            publicacao.ValorProva = valorProva;
+
+            var erros = publicacao.Validate();
+
+            if (erros.Length == 0)
+            {
+                _publicacaoRepository.Modificar(publicacao);
+
+                return _publicacaoRepository.SaveChanges();
+            }
+            else throw new DomainException(erros);
+        }
+        public async Task<int> ExcluirPublicacaoAsync(int professorId, int id)
+        {
+            var publicacao = await _publicacaoRepository.ObterAsync(id);
+
+            if (publicacao.Avaliacao.ProfessorId != professorId)
+                throw new DomainException("A avaliação informada não pertence ao professor logado!");
+
+            _publicacaoRepository.Excluir(id);
+
+            _publicacaoRepository.SaveChanges();
+
+            return 1;
         }
     }
 }

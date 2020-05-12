@@ -116,9 +116,9 @@ namespace PUC.LDSI.Application.AppServices
         {
             try
             {
-                var retorno = await _avaliacaoService.ExcluirOpcaoAvaliacaoAsync(id);
+                await _avaliacaoService.ExcluirOpcaoAvaliacaoAsync(id);
 
-                return new DataResult<int>(retorno);
+                return new DataResult<int>(1);
             }
             catch (Exception ex)
             {
@@ -130,9 +130,51 @@ namespace PUC.LDSI.Application.AppServices
         {
             try
             {
-                var retorno = await _avaliacaoService.ExcluirQuestaoAvaliacaoAsync(id);
+                await _avaliacaoService.ExcluirQuestaoAvaliacaoAsync(id);
+
+                return new DataResult<int>(1);
+            }
+            catch (Exception ex)
+            {
+                return new DataResult<int>(ex);
+            }
+        }
+
+        public async Task<DataResult<int>> AdicionarPublicacaoAsync(int professorId, int avaliacaoId, int turmaId, DateTime dataInicio, DateTime dataFim, int valorProva)
+        {
+            try
+            {
+                var retorno = await _avaliacaoService.AdicionarPublicacaoAsync(professorId, avaliacaoId, turmaId, dataInicio, dataFim, valorProva);
 
                 return new DataResult<int>(retorno);
+            }
+            catch (Exception ex)
+            {
+                return new DataResult<int>(ex);
+            }
+        }
+
+        public async Task<DataResult<int>> AlterarPublicacaoAsync(int professorId, int id, DateTime dataInicio, DateTime dataFim, int valorProva)
+        {
+            try
+            {
+                var retorno = await _avaliacaoService.AlterarPublicacaoAsync(professorId, id, dataInicio, dataFim, valorProva);
+
+                return new DataResult<int>(retorno);
+            }
+            catch (Exception ex)
+            {
+                return new DataResult<int>(ex);
+            }
+        }
+
+        public async Task<DataResult<int>> ExcluirPublicacaoAsync(int professorId, int id)
+        {
+            try
+            {
+                await _avaliacaoService.ExcluirPublicacaoAsync(professorId, id);
+
+                return new DataResult<int>(1);
             }
             catch (Exception ex)
             {
