@@ -1,0 +1,13 @@
+
+/PUC.LDSI.Application/bin/
+/PUC.LDSI.Application/obj/
+/PUC.LDSI.DataBase/bin/
+/PUC.LDSI.DataBase/obj/
+/PUC.LDSI.Domain/bin/
+/PUC.LDSI.Domain/obj/
+/PUC.LDSI.Identity/bin/
+/PUC.LDSI.Identity/obj/
+/PUC.LDSI.IoC/bin/
+/PUC.LDSI.IoC/obj/
+/PUC.LDSI.MVC/bin/
+/PUC.LDSI.MVC/obj/
