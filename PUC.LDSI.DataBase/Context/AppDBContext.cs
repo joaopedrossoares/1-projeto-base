@@ -19,6 +19,7 @@ namespace PUC.LDSI.DataBase
         public DbSet<QuestaoAvaliacao> QuestaoAvaliacao { get; set; }
         public DbSet<QuestaoProva> QuestaoProva { get; set; }
         public DbSet<Turma> Turma { get; set; }
+        public DbSet<Questao> Questao { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -39,6 +40,7 @@ namespace PUC.LDSI.DataBase
             modelbuilder.ApplyConfiguration(new PublicacaoConfiguration());
             modelbuilder.ApplyConfiguration(new QuestaoAvaliacaoConfiguration());
             modelbuilder.ApplyConfiguration(new QuestaoProvaConfiguration());
+            modelbuilder.ApplyConfiguration(new QuestaoConfiguration());
 
             base.OnModelCreating(modelbuilder);
         }

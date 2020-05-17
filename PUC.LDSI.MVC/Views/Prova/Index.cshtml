@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ProvaPublicadaViewModel>
+
+@{
+    ViewData["Title"] = "Minhas Avaliações";
+}
+
+<h2>Avaliações</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-default">Criar Nova</a>
+</p>
+<table class="table">
+
+
+    <thead>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <th>Disciplina</th>
+                <th>Materia</th>
+                <th>Descricao</th>
+                <th>Publicado Em</th>
+                <th>Início</th>
+                <th>Fim</th>
+                <th>Valor da Prova</th>
+                <th>Situação</th>
+                <th>
+                    @if (item.Status.Equals("Disponível") || item.Status.Equals("Agendada"))
+                    {
+                        <span>( --- )</span>
+                    }
+                    else if (item.Status.Equals("Perdida"))
+                    {
+                        <span>( 0 )</span>
+                    }
+                    else
+                    {
+                        <span>TODO</span>
+                    }
+                </th>
+            </tr>
+        }
+
+    </thead>
+   
+</table>
