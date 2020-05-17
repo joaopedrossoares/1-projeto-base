@@ -1,0 +1,56 @@
+﻿@model PublicacaoViewModel
+@{
+    ViewData["Title"] = "Excluir Publicação";
+}
+<h2>@ViewData["Title"]</h2>
+
+<h3>Exclusão essa publicação?</h3>
+<div>
+    <h4>Publicacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <!-- Atributos dinamicos -->
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Descricao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Turma)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Turma.Nome)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.DataCriacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCriacao)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataInicio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFim)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataFim)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorProva)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorProva)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id"/>
+        <input type="submit" value="Excluir" class="btn btn-default"/>
+        <a asp-action="Index" class="btn btn-default">Cancelar</a>
+    </form>
+</div>
