@@ -11,7 +11,7 @@ namespace PUC.LDSI.DataBase.EntityConfig
             builder.Property(x => x.Enunciado).HasColumnType("text").IsRequired();
             builder.Property(x => x.Tipo).HasColumnType("int").IsRequired();
 
-            builder.HasOne(x => x.Avaliacao).WithMany(x => x.Questoes).HasForeignKey(x => x.AvaliacaoId).IsRequired();
+            //builder.HasOne(x => x.Avaliacao).WithMany(x => x.Questao).HasForeignKey(x => x.AvaliacaoId).IsRequired();
 
             new EntityConfiguration();
         }

@@ -36,5 +36,16 @@ namespace PUC.LDSI.DataBase.Repository
 
             return publicacao;
         }
+        public async Task<Publicacao> ListarPublicacoesDoAlunoAsync(int IDAluno)
+        {
+            var avaliacoes = await _context.Publicacao
+                 .Include(x => x.Avaliacao)
+                 .ThenInclude(x => x.Professor)
+                 .Include(x => x.Turma)
+                 .Where(x => x.Avaliacao.ProfessorId == IDAluno).FirstOrDefaultAsync();
+
+            return avaliacoes;
+
+        }
     }
 }
