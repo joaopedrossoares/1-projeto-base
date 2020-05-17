@@ -8,7 +8,8 @@ namespace PUC.LDSI.Domain.Interfaces.Repository
 {
     public interface IPublicacaoRepository : IRepository<Publicacao>
     {
-        Task<List<Publicacao>> ListarPublicacoesDoProfessorAsync(int professorId);
-        Task<Publicacao> ObterAsync(int id);
+        Task<List<Publicacao>> ListarPublicacoesDoAlunoAsync(Task<Aluno> aluno);
+        Task<List<Publicacao>> ListarAvaliacoesDoProfessorAsync(int professorId);        
     }
 }
+      
